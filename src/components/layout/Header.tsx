@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { LogoSimple } from "@/components/ui/Logo";
 
 const navItems = [
   { label: "Главная", href: "/" },
@@ -48,6 +49,7 @@ export function Header() {
     >
       <div className="container flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
+          <LogoSimple size={36} />
           <span
             className={`font-display text-2xl font-bold transition-colors duration-300 ${
               showSolidHeader ? "text-foreground" : "text-primary-foreground"
