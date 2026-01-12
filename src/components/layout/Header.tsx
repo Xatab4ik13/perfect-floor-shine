@@ -12,10 +12,19 @@ const navItems = [
   { label: "Контакты", href: "/#contact" },
 ];
 
+// Pages with dark hero sections where transparent header works
+const darkHeroPages = ["/"];
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+
+  // Check if current page has a dark hero section
+  const hasDarkHero = darkHeroPages.includes(location.pathname);
+  
+  // On pages without dark hero, always show solid header
+  const showSolidHeader = isScrolled || !hasDarkHero;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +41,7 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        showSolidHeader
           ? "bg-background/95 backdrop-blur-md shadow-md py-3"
           : "bg-transparent py-5"
       }`}
@@ -41,7 +50,7 @@ export function Header() {
         <Link to="/" className="flex items-center gap-2">
           <span
             className={`font-display text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? "text-foreground" : "text-primary-foreground"
+              showSolidHeader ? "text-foreground" : "text-primary-foreground"
             }`}
           >
             Perfect<span className="text-gradient">Floor</span>
@@ -55,7 +64,7 @@ export function Header() {
               key={item.href}
               to={item.href}
               className={`text-sm font-medium transition-colors duration-300 hover:text-primary ${
-                isScrolled
+                showSolidHeader
                   ? "text-foreground/80"
                   : "text-primary-foreground/90 hover:text-primary-foreground"
               }`}
@@ -69,13 +78,13 @@ export function Header() {
           <a
             href="tel:+79991234567"
             className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-              isScrolled ? "text-foreground" : "text-primary-foreground"
+              showSolidHeader ? "text-foreground" : "text-primary-foreground"
             }`}
           >
             <Phone className="h-4 w-4" />
             +7 (999) 123-45-67
           </a>
-          <Button variant={isScrolled ? "default" : "hero"} size="lg">
+          <Button variant={showSolidHeader ? "default" : "hero"} size="lg">
             Заказать звонок
           </Button>
         </div>
@@ -88,13 +97,13 @@ export function Header() {
           {isMobileMenuOpen ? (
             <X
               className={`h-6 w-6 ${
-                isScrolled ? "text-foreground" : "text-primary-foreground"
+                showSolidHeader ? "text-foreground" : "text-primary-foreground"
               }`}
             />
           ) : (
             <Menu
               className={`h-6 w-6 ${
-                isScrolled ? "text-foreground" : "text-primary-foreground"
+                showSolidHeader ? "text-foreground" : "text-primary-foreground"
               }`}
             />
           )}
