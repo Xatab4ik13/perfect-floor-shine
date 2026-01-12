@@ -9,7 +9,7 @@ import work5 from "@/assets/portfolio/work-5.jpg";
 import work10 from "@/assets/portfolio/work-10.jpg";
 
 const portfolioItems = [
-  { image: work1, title: "Квартира в ЖК Москва-Сити", area: "45 м²" },
+  { image: work1, title: "Квартира в ЖК", area: "45 м²" },
   { image: work4, title: "Лофт-пространство", area: "120 м²" },
   { image: work5, title: "Квартира в сталинке", area: "35 м²" },
   { image: work10, title: "Дизайнерский паркет", area: "60 м²" },
