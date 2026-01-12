@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import avitoLogo from "@/assets/avito-logo.png";
 
 const reviews = [
   {
@@ -60,13 +61,6 @@ const reviews = [
 
 const AVITO_URL = "https://www.avito.ru/brands/4ee2dffbeb938473ee2c30157be7bf45/all?gdlkerfdnwq=101&page_from=from_item_card&iid=4147165867&sellerId=a52c5a3b7b28b879236585a85c2ebb97";
 
-const AvitoLogo = ({ className }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 120 32" fill="currentColor">
-    <path d="M13.7 7.9c-3.3 0-6.4 1.5-8.4 4.1L3.9 9.2c-.6-.9-1.8-1-2.6-.2-.8.8-.7 2.1.2 2.8l1.8 1.5c-.8 1.7-1.3 3.6-1.3 5.6 0 7.2 5.8 13 13 13s13-5.8 13-13-5.8-13-13-13h-.3zm0 21.3c-4.6 0-8.3-3.7-8.3-8.3 0-1.4.3-2.7.9-3.9l4.1 3.4c.4.3.9.5 1.4.5.6 0 1.2-.3 1.6-.7.7-.9.6-2.2-.3-2.9l-4.1-3.4c1.3-1.2 3-2 4.8-2h.2c4.6.1 8.2 3.9 8.1 8.5-.1 4.5-3.8 8.2-8.4 8.2v.6z"/>
-    <path d="M43.4 9.8l-8.1 19.9h4.4l1.5-4h8.1l1.5 4h4.5L47.1 9.8h-3.7zm-.9 12.3l2.8-7.4 2.7 7.4h-5.5zM68.1 9.8h-4.3l-5.7 8.3-5.7-8.3h-4.3l8.2 11.4v8.5h3.6v-8.5l8.2-11.4zM72.9 9.8h-3.6v19.9h3.6V9.8zM91.3 9.8h-14v3.4h5.2v16.5h3.6V13.2h5.2V9.8zM108.1 18.9c0-5.5-4.1-9.5-9.4-9.5-5.4 0-9.5 4-9.5 9.5s4.1 9.6 9.5 9.6c5.3 0 9.4-4.1 9.4-9.6zm-15.2 0c0-3.5 2.4-6.1 5.8-6.1 3.3 0 5.8 2.6 5.8 6.1s-2.5 6.2-5.8 6.2c-3.4 0-5.8-2.7-5.8-6.2z"/>
-  </svg>
-);
-
 export function Reviews() {
   return (
     <section id="reviews" className="py-24 bg-secondary/30">
@@ -100,7 +94,7 @@ export function Reviews() {
             ))}
             <span className="ml-2 text-lg font-semibold">5.0</span>
             <span className="text-muted-foreground ml-1">на</span>
-            <AvitoLogo className="h-5 w-auto text-[#00AAFF]" />
+            <img src={avitoLogo} alt="Avito" className="h-5 w-auto" />
           </a>
         </motion.div>
 
@@ -160,7 +154,7 @@ export function Reviews() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[#00AAFF] hover:bg-[#0099ee] text-white px-6 py-3 rounded-full transition-colors font-medium"
           >
-            <AvitoLogo className="h-5 w-auto text-white" />
+            <img src={avitoLogo} alt="Avito" className="h-5 w-auto" />
             Смотреть все отзывы
             <svg
               className="h-4 w-4"
