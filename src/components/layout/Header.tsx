@@ -74,16 +74,26 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
-          <a
-            href="tel:+79991234567"
-            className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-              showSolidHeader ? "text-foreground" : "text-primary-foreground"
-            }`}
-          >
-            <Phone className="h-4 w-4" />
-            +7 (999) 123-45-67
-          </a>
+        <div className="hidden lg:flex items-center gap-6">
+          <div className="flex flex-col items-end gap-0.5">
+            <a
+              href="tel:+79339260909"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary ${
+                showSolidHeader ? "text-foreground" : "text-primary-foreground"
+              }`}
+            >
+              <Phone className="h-4 w-4" />
+              +7 933 926-09-09
+            </a>
+            <a
+              href="tel:+79111670166"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                showSolidHeader ? "text-foreground/80" : "text-primary-foreground/80"
+              }`}
+            >
+              +7 911 167-01-66
+            </a>
+          </div>
           <Button variant={showSolidHeader ? "default" : "hero"} size="lg">
             Заказать звонок
           </Button>
@@ -129,13 +139,22 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <a
-                href="tel:+79991234567"
-                className="flex items-center gap-2 text-foreground py-2 font-medium"
-              >
-                <Phone className="h-4 w-4" />
-                +7 (999) 123-45-67
-              </a>
+              <div className="space-y-2 py-2">
+                <a
+                  href="tel:+79339260909"
+                  className="flex items-center gap-2 text-foreground font-medium"
+                >
+                  <Phone className="h-4 w-4" />
+                  +7 933 926-09-09
+                </a>
+                <a
+                  href="tel:+79111670166"
+                  className="flex items-center gap-2 text-foreground/80 font-medium"
+                >
+                  <Phone className="h-4 w-4" />
+                  +7 911 167-01-66
+                </a>
+              </div>
               <Button variant="hero" size="lg" className="mt-2">
                 Заказать звонок
               </Button>

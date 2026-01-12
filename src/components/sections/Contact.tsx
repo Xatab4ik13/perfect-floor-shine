@@ -48,20 +48,20 @@ export function Contact() {
             </p>
 
             <div className="mt-10 space-y-6">
-              <a
-                href="tel:+79991234567"
-                className="flex items-center gap-4 group"
-              >
-                <div className="w-14 h-14 rounded-xl bg-gradient-wood flex items-center justify-center group-hover:scale-110 transition-transform">
+              <div className="flex items-center gap-4 group">
+                <div className="w-14 h-14 rounded-xl bg-gradient-wood flex items-center justify-center">
                   <Phone className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Телефон</p>
-                  <p className="font-semibold text-lg group-hover:text-primary transition-colors">
-                    +7 (999) 123-45-67
-                  </p>
+                  <p className="text-sm text-muted-foreground">Телефоны</p>
+                  <a href="tel:+79339260909" className="block font-semibold text-lg hover:text-primary transition-colors">
+                    +7 933 926-09-09
+                  </a>
+                  <a href="tel:+79111670166" className="block font-semibold text-lg hover:text-primary transition-colors">
+                    +7 911 167-01-66
+                  </a>
                 </div>
-              </a>
+              </div>
 
               <a
                 href="mailto:info@perfectfloor.ru"
