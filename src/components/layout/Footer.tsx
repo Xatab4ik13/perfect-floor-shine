@@ -100,7 +100,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="h-4 w-4 text-gold" />
-                <span>Пн-Вс: 8:00 - 21:00</span>
+                <span>Ежедневно: 9:00 - 22:00</span>
               </li>
             </ul>
           </div>
@@ -110,16 +110,8 @@ export function Footer() {
             <h4 className="font-semibold text-lg mb-4">Мы работаем</h4>
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li className="flex justify-between">
-                <span>Понедельник - Пятница</span>
-                <span>8:00 - 21:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Суббота</span>
-                <span>9:00 - 20:00</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Воскресенье</span>
-                <span>10:00 - 18:00</span>
+                <span>Ежедневно без выходных</span>
+                <span>9:00 - 22:00</span>
               </li>
             </ul>
             <p className="mt-4 text-xs text-primary-foreground/50">
