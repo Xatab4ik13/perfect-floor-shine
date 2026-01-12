@@ -17,7 +17,7 @@ import work10 from "@/assets/portfolio/work-10.jpg";
 const portfolioItems = [
   {
     image: work1,
-    title: "Квартира в ЖК Москва-Сити",
+    title: "Квартира в ЖК",
     area: "45 м²",
     type: "Циклёвка Премиум",
   },
