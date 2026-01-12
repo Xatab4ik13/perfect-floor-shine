@@ -35,14 +35,14 @@ export function CTA() {
               Заказать бесплатный замер
               <ArrowRight className="h-5 w-5" />
             </Button>
-            <a href="tel:+79991234567">
+            <a href="tel:+79339260909">
               <Button
                 variant="outline"
                 size="xl"
                 className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
               >
                 <Phone className="h-5 w-5" />
-                Позвонить сейчас
+                +7 933 926-09-09
               </Button>
             </a>
           </div>
