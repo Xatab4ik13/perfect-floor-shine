@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { X } from "lucide-react";
@@ -13,6 +13,11 @@ import work7 from "@/assets/portfolio/work-7.jpg";
 import work8 from "@/assets/portfolio/work-8.jpg";
 import work9 from "@/assets/portfolio/work-9.jpg";
 import work10 from "@/assets/portfolio/work-10.jpg";
+import work11 from "@/assets/portfolio/work-11.jpg";
+import work12 from "@/assets/portfolio/work-12.jpg";
+import work13 from "@/assets/portfolio/work-13.jpg";
+import work14 from "@/assets/portfolio/work-14.jpg";
+import work15 from "@/assets/portfolio/work-15.jpg";
 
 const portfolioItems = [
   {
@@ -75,10 +80,49 @@ const portfolioItems = [
     area: "60 м²",
     type: "Реставрация художественного паркета",
   },
+  {
+    image: work11,
+    title: "Паркет ёлочка в коридоре",
+    area: "25 м²",
+    type: "Циклёвка Премиум",
+  },
+  {
+    image: work12,
+    title: "3D-паркет с оптической иллюзией",
+    area: "18 м²",
+    type: "Укладка художественного паркета",
+  },
+  {
+    image: work13,
+    title: "Тёмный паркет в квартире",
+    area: "55 м²",
+    type: "Тонирование",
+  },
+  {
+    image: work14,
+    title: "Модульный паркет ромбами",
+    area: "30 м²",
+    type: "Циклёвка Евролюкс",
+  },
+  {
+    image: work15,
+    title: "Сцена концертного зала",
+    area: "100 м²",
+    type: "Циклёвка Стандарт",
+  },
 ];
 
 const Portfolio = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+
+  useEffect(() => {
+    document.title = "Портфолио | PerfectFloor — Примеры работ по циклёвке паркета";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Смотрите примеры наших работ: циклёвка паркета в квартирах, загородных домах и офисах Москвы. Более 500 выполненных проектов.');
+    }
+  }, []);
 
   return (
     <Layout>
