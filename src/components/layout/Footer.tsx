@@ -70,20 +70,12 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-gold" />
-                <div className="flex flex-col">
-                  <a
-                    href="tel:+79339260909"
-                    className="hover:text-gold transition-colors"
-                  >
-                    +7 933 926-09-09
-                  </a>
-                  <a
-                    href="tel:+79111670166"
-                    className="hover:text-gold transition-colors"
-                  >
-                    +7 911 167-01-66
-                  </a>
-                </div>
+                <a
+                  href="tel:+79111670166"
+                  className="hover:text-gold transition-colors"
+                >
+                  +7 911 167-01-66
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-gold" />

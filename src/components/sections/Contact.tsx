@@ -72,10 +72,7 @@ export function Contact() {
                   <Phone className="h-6 w-6 text-primary-foreground" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Телефоны</p>
-                  <a href="tel:+79339260909" className="block font-semibold text-lg hover:text-primary transition-colors">
-                    +7 933 926-09-09
-                  </a>
+                  <p className="text-sm text-muted-foreground">Телефон</p>
                   <a href="tel:+79111670166" className="block font-semibold text-lg hover:text-primary transition-colors">
                     +7 911 167-01-66
                   </a>

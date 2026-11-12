@@ -374,14 +374,14 @@ const ServiceDetail = () => {
               <Button variant="gold" size="lg">
                 Оставить заявку
               </Button>
-              <a href="tel:+79339260909">
+              <a href="tel:+79111670166">
                 <Button
                   variant="outline"
                   size="lg"
                   className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
                 >
                   <Phone className="h-4 w-4" />
-                  +7 933 926-09-09
+                  +7 911 167-01-66
                 </Button>
               </a>
             </div>
